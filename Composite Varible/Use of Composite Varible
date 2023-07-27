@@ -1,0 +1,20 @@
+----------------------------------- Use of Composite Varible ----------------------------------
+
+declare 
+r_emp employees%rowtype;                   -- declaration of composite varible.
+
+begin
+ select * into r_emp 
+ from employees
+ where employee_id = 101;
+ 
+ dbms_output.put_line(r_emp.first_name ||' '||
+                      r_emp.last_name|| '  Job Id is '||
+                      r_emp.job_id ||' and salary is ' ||
+                      r_emp.salary
+                      );
+ 
+ end;
+ 
+ 
+
